@@ -7,8 +7,8 @@ const app = express();
 const port = 3000;
 
 // Middleware
-app.use(cors());            // cho phép frontend gọi API khác port
-app.use(express.json());    // để đọc JSON từ body
+app.use(cors());
+app.use(express.json());
 
 // Route kiểm tra server
 app.get('/', (req, res) => {
@@ -27,6 +27,25 @@ app.get('/products', (req, res) => {
       return res.status(500).json({ message: 'Lỗi server' });
     }
     res.json(results);
+  });
+});
+
+// 1b. Lấy chi tiết 1 sản phẩm theo id
+app.get('/products/:id', (req, res) => {
+  const { id } = req.params;
+  const sql = 'SELECT * FROM products WHERE id = ?';
+
+  db.query(sql, [id], (err, results) => {
+    if (err) {
+      console.error('Lỗi truy vấn:', err);
+      return res.status(500).json({ message: 'Lỗi server' });
+    }
+
+    if (results.length === 0) {
+      return res.status(404).json({ message: 'Không tìm thấy sản phẩm' });
+    }
+
+    res.json(results[0]);
   });
 });
 

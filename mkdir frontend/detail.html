@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop Alienware M15 - CyberShop</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container navbar">
+            <div class="logo">
+                <a href="index.html" style="text-decoration:none; color:white;">
+                    Cyber<span class="neon-text">Shop</span>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="#" class="active">Laptop</a></li>
+                    <li><a href="#">Điện thoại</a></li>
+                    <li><a href="#">Phụ kiện</a></li>
+                </ul>
+            </nav>
+            <div class="cart" id="cart-icon">Giỏ hàng (0)</div>
+        </div>
+    </header>
+
+    <div class="container breadcrumb">
+        <p>Trang chủ / Laptop / <span class="active">Alienware M15 R7</span></p>
+    </div>
+
+    <section class="container product-detail-section">
+        <div class="detail-grid">
+            <div class="detail-left">
+                <div class="main-image">
+                    <img src="https://img.tgdd.vn/imgt/f_webp,fit_outside,quality_100/https://cdn.tgdd.vn/Products/Images/44/309604/dell-gaming-alienware-m15-r7-i7-71008ea0vn-thumb-600x600.jpg"
+                         alt="Laptop Gaming">
+                </div>
+            </div>
+
+            <div class="detail-right">
+                <h1 class="product-title" data-testid="p-name">Laptop Gaming Alienware M15 R7</h1>
+                <p class="product-price">45.000.000đ</p>
+                
+                <div class="product-desc">
+                    <p>Chiến thần Gaming thế hệ mới. Hệ thống tản nhiệt Cryo-Tech độc quyền giúp máy luôn mát mẻ trong những trận combat căng thẳng.</p>
+                </div>
+
+                <table class="specs-table">
+                    <tr>
+                        <td>CPU:</td>
+                        <td>Intel Core i9-12900H</td>
+                    </tr>
+                    <tr>
+                        <td>GPU:</td>
+                        <td>NVIDIA RTX 3080 Ti 16GB</td>
+                    </tr>
+                    <tr>
+                        <td>RAM:</td>
+                        <td>32GB DDR5 4800MHz</td>
+                    </tr>
+                    <tr>
+                        <td>SSD:</td>
+                        <td>1TB NVMe Gen4</td>
+                    </tr>
+                </table>
+
+                <div class="buy-controls">
+                    <div class="quantity-control">
+                        <label>Số lượng:</label>
+                        <input type="number" id="input-qty" value="1" min="1" max="5">
+                    </div>
+                    <button id="btn-add-to-cart-detail" class="btn-primary btn-large">
+                        THÊM VÀO GIỎ HÀNG
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 CyberShop. Dự án Môn học ASP.NET Core.</p>
+    </footer>
+
+    
+    <script src="app.js"></script>
+</body>
+</html>
